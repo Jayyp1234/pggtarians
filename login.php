@@ -89,7 +89,7 @@ if (isset($_POST['login'])){
         <div class=" col-12 col-md-8 col-lg-6 mx-auto">
             <header>
                 <img src="assets/images/pgg 2.svg" alt="" class="img-fluid">
-                <h4>Log in</h4>
+                <h4>Login</h4>
             </header>
             <main>
                 <form action="" method="POST" autocomplete="off">
