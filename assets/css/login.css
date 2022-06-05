@@ -1,0 +1,290 @@
+@font-face {
+    font-family: Mulish;
+    src: url('../fonts/Mulish-Medium.ttf');
+}
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+:root{
+    --tertiary-color: #d8dee7;
+    --primary-color: #33466b;
+    --hover-color: #f87a0cdd;
+    --shadow: #ffca9da3;
+    --secondary-color: #f87c0c;
+    --transition: all 0.4s ease-in-out;
+    --primary-font: Mulish, Poppins, Helvetica;
+    --input-bg: #ededed;
+    --button-color: #fff;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-size: clamp(12px, calc(1vw + .25rem), 14px);
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    letter-spacing: .2px;
+}
+.btn, button{
+    border: none;
+    outline: none;
+}
+.form-label{
+    font-size: 14px;
+    margin: 0 0 3px 0;
+    font-family: var(--primary-font);
+    letter-spacing: .1px;
+}
+* ::placeholder,
+select{
+    font-family: var(--primary-font);
+    font-size: clamp(12px, 80%, 16px);
+    height: 100%;
+}
+
+
+
+body{
+    min-height: 100vh;
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+}
+.main.row {
+    margin: 0 auto;
+    min-height: 100%;
+}
+.main.row > div {
+    min-height: auto;
+    padding: 2rem 1rem;
+}
+main{
+    min-height: auto;
+}
+form{
+    background: #fff;
+}
+form > div{
+    margin-bottom: 2rem;
+}
+.errors{
+    color: red;
+    display: flex;
+    align-items: center;
+    font-family: var(--primary-font);
+    letter-spacing: .3px;
+    margin: 0;
+    font-size: 12px;
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+form > div .position-relative > i {
+    position: absolute;
+    right: 1rem;
+    top: 35%;
+    color: grey;
+    font-size: 17px;
+    cursor: pointer;
+}
+form > div .position-relative:focus-within > i{
+    color: #000000d1;
+}
+form > div .form-control{
+    background-color: var(--input-bg);
+    border-radius: .45rem;
+    padding: 0.8rem 0.7rem;
+    appearance: none;
+    position: relative;
+    font-family: var(--primary-font);
+    min-height: 2rem;
+    font-size: clamp(12px, 80%, 16px);
+}
+form > div .form-control:focus{
+    box-shadow: none;
+    border: 2px solid var(--secondary-color);
+}
+form > div .form-control::placeholder{
+    opacity: 0;
+}
+
+
+.keep_forgot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+    padding-left: .3rem;
+}
+.form-check-input:focus{
+    border-color: var(--secondary-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--shadow);
+}
+.form-check-input:checked {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.form-check-label{
+    font-size: clamp(12px, calc(1vw + .25rem), 14px);
+    font-family: var(--primary-font); 
+}
+.sign_in{
+    text-align: center;
+}
+.sign_in button{
+    min-height: 2rem;
+    padding: 1rem 0;
+    font-size: clamp(12px, calc(1vw + .25rem), 14px);
+    font-weight: 600;
+    letter-spacing: .5px;
+    background-color: var(--primary-color);
+    border-radius: .45rem;
+    color: var(--button-color);
+    width: 100%;
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+@media ( hover :hover){
+    .sign_in button:hover{
+        background-color: var(--hover-color);
+        box-shadow: 0 0 10px -1px var(--hover-color);
+        transform: scale(1.005);
+    }
+}
+
+.forgot_password_sm{
+    text-align: center;
+}
+.hr{
+    background-color: var(--input-bg);
+    height: 1px;
+    position: relative;
+    margin: 3rem 0 2rem;
+}
+.hr small{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 0 1rem;
+    font-family: var(--primary-font);
+}
+.other_signIn_method{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 3rem;
+}
+.other_signIn_method > div{
+    padding: 0;
+}
+.other_signIn_method > div a{
+    display: flex;
+    align-items: center; 
+    border: 2px solid #1717187d;
+    border-radius: .25rem;
+    padding: .38rem 1rem;
+    color: #060930;
+    justify-content: center;
+    font-size: 12px;
+}
+.other_signIn_method > div a img{
+    max-width: 100%;
+    border-radius: 100%;
+    height: 30px;
+    margin-right: 1rem;
+}
+.other_signIn_method > div:last-child a{
+    padding: .6rem 1rem;
+}
+.other_signIn_method > div:last-child a img{
+    border-radius: 4px;
+    height: 23px;
+}
+.create_account{
+    text-align: center;
+    margin: 2rem 0 0;
+}
+.create_account p{
+    font-family: var(--primary-font);
+    color: #555;
+    font-size: 14px;
+}
+@media all and (max-width: 1024px){
+    header .img-fluid {
+        max-width: clamp(90px, 25%, 10rem);
+    }
+}
+@media all and (max-width: 425px){
+    .main.row > div {
+        padding: 1rem 0.6rem;
+    }
+    form{
+        margin-top: 1rem;
+    }
+    form > div {
+        margin-bottom: 1.2rem;
+    }
+    form > div .position-relative > i {
+        top: 0.95rem;
+    }    
+    form > div .form-control::placeholder{
+        opacity: 1;
+    }
+
+    .password{
+        margin-bottom: 0.8rem;
+    }
+    .sign_in {
+        margin-bottom: 1rem;
+    }
+    .sign_in button {
+        padding: .8rem 0;
+    }
+    .forgot_password_sm {
+        margin: 0 0 1.3rem;
+    }
+    .hr {
+        margin: 1rem 0;
+    }
+    .hr small {
+        padding: 0 0.4rem;
+        font-size: 12px;
+    }
+    .other_signIn_method {
+        display: block;
+        align-items: unset;
+        justify-content: unset;
+        height: auto;
+        margin: 2rem auto 0;
+    }
+    .other_signIn_method > div{
+        padding: 0 .75rem ;
+    }
+    .other_signIn_method > div a {
+        justify-content: center;
+        margin: 10px 0 4px;
+    }
+    .other_signIn_method > div:last-child a img {
+        margin-left: 1rem;
+    }
+    .create_account{
+        font-size: 12px;
+        margin: 1.2rem 0 0.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .create_account p,
+    .create_account p a {
+        font-size: 12.5px;
+    }
+}
